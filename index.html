@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arshan Abbas | AI & IoT Innovator</title>
+  <meta
+    name="description"
+    content="Portfolio of Arshan Abbas — AI & IoT Innovator, Backend Developer, and Data-Driven Technologist based in Germany."
+  />
+  <style>
+    :root {
+      --bg: #050816;
+      --panel: #0b1020;
+      --panel-2: #11172b;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --line: rgba(148, 163, 184, 0.14);
+      --accent: #60a5fa;
+      --accent-2: #a78bfa;
+      --success: #34d399;
+      --radius: 20px;
+      --shadow: 0 20px 40px rgba(0,0,0,0.32);
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(96,165,250,0.14), transparent 28%),
+        radial-gradient(circle at right top, rgba(167,139,250,0.12), transparent 25%),
+        linear-gradient(180deg, #030712 0%, #050816 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(12px);
+      background: rgba(3,7,18,0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 72px 0 40px;
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(17,23,43,0.94), rgba(11,16,32,0.96));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 34px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(96,165,250,0.1);
+      color: var(--accent);
+      border: 1px solid rgba(96,165,250,0.22);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      margin: 0 0 16px;
+      color: #dbe4f3;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .summary {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 62ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #08111f;
+      border: 0;
+    }
+
+    .hero-side {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .meta-list, .bullet-list {
+      padding-left: 18px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .meta-list li, .bullet-list li { margin-bottom: 8px; }
+
+    .section {
+      padding: 14px 0;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.95fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+
+    .panel {
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .timeline-item,
+    .project-item,
+    .mini-item {
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item:first-of-type,
+    .project-item:first-of-type,
+    .mini-item:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .role {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .tag {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(96,165,250,0.09);
+      border: 1px solid rgba(96,165,250,0.18);
+      color: #cfe3ff;
+      font-size: 12px;
+    }
+
+    .highlight {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .contact-box {
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 28px 0 48px;
+      color: #718096;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .section-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="container">
+      <div class="brand">Arshan Abbas</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <header class="container hero">
+    <section class="card hero-main">
+      <div class="eyebrow">AI • IoT • Backend • Industrial Systems</div>
+      <h1>Hallo, I’m Arshan Abbas.</h1>
+      <p class="subtitle">AI & IoT Innovator | Backend Developer | Data-Driven Technologist</p>
+      <p class="summary">
+        Master’s student in Computer Science at the University of Siegen with a focus on embedded systems,
+        industrial AI, and production-grade backend systems. I work on real-world data systems, especially
+        where machine learning meets automation, computer vision, and IoT.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="https://github.com/arshanabbas" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/arshanabbas" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </section>
+
+    <aside class="card hero-side">
+      <div>
+        <h2>Snapshot</h2>
+        <ul class="meta-list">
+          <li>Based in North Rhine-Westphalia, Germany</li>
+          <li>Master’s in Computer Science (Embedded Systems), University of Siegen</li>
+          <li>Focused on AI-based welding defect detection using Deep Learning and OpenCV</li>
+          <li>3+ years in automation, IoT, and backend systems</li>
+          <li>English fluent, Hindi native, German in progress</li>
+        </ul>
+      </div>
+      <div class="tags">
+        <span class="tag">PyTorch</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">Python</span>
+        <span class="tag">OpenCV</span>
+        <span class="tag">IoT</span>
+        <span class="tag">Backend</span>
+      </div>
+    </aside>
+  </header>
+
+  <main class="container section-grid">
+    <div>
+      <section id="about" class="section">
+        <div class="card panel">
+          <h2>About</h2>
+          <p>
+            I’m building toward a profile at the intersection of <span class="highlight">industrial AI, embedded systems, and software engineering</span>.
+            My work is centered on practical outcomes: detect defects, automate workflows, process data reliably,
+            and build backend systems that actually support production use cases.
+          </p>
+          <p>
+            The theme I’d recommend for your portfolio is: <span class="highlight">“AI in Industry, not just prototypes.”</span>
+            That is already visible in your GitHub profile, and it is strong positioning.
+          </p>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="card panel">
+          <h2>Experience</h2>
+
+          <article class="timeline-item">
+            <h3 class="role">Master’s Research / Applied AI Work</h3>
+            <div class="meta">University of Siegen · Germany</div>
+            <ul class="bullet-list">
+              <li>Working on <span class="highlight">AI-based welding defect detection</span> using deep learning and OpenCV.</li>
+              <li>Applying computer vision to industrial inspection scenarios with an emphasis on robustness and deployment relevance.</li>
+              <li>Building a profile around embedded and data-driven systems rather than demo-only ML work.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <h3 class="role">Backend / Automation / IoT Engineering</h3>
+            <div class="meta">3+ years of industry-oriented experience</div>
+            <ul class="bullet-list">
+              <li>Worked on automation, IoT, and backend systems serving real users and operational workflows.</li>
+              <li>Combined software engineering with device-level and data-pipeline thinking.</li>
+              <li>Focused on systems reliability, data handling, and business-facing technical delivery.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="card panel">
+          <h2>Featured Projects</h2>
+
+          <article class="project-item">
+            <h3 class="role">Welding Defect Detection</h3>
+            <div class="meta">Deep Learning · OpenCV · Industrial AI</div>
+            <p>
+              Computer vision pipeline for industrial defect analysis with focus on defect localization,
+              inspection quality, and deployment-oriented model behavior.
+            </p>
+          </article>
+
+          <article class="project-item">
+            <h3 class="role">IoT & Automation Systems</h3>
+            <div class="meta">Embedded Data Flow · Device Integration · Backend Logic</div>
+            <p>
+              Systems that connect hardware, data collection, and backend processing for operational use cases.
+            </p>
+          </article>
+
+          <article class="project-item">
+            <h3 class="role">Data-Driven Backend Applications</h3>
+            <div class="meta">Python · APIs · Storage · Analytics</div>
+            <p>
+              Backend-oriented applications designed to transform raw inputs into usable workflows, reports,
+              or decision-support outputs.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div>
+      <section id="skills" class="section">
+        <div class="card panel">
+          <h2>Skills</h2>
+
+          <article class="mini-item">
+            <h3 class="role">AI / ML</h3>
+            <div class="meta">PyTorch, TensorFlow, Scikit-learn, OpenCV, NumPy, Pandas, Matplotlib</div>
+          </article>
+
+          <article class="mini-item">
+            <h3 class="role">Programming</h3>
+            <div class="meta">Python, C++, backend development, data engineering fundamentals</div>
+          </article>
+
+          <article class="mini-item">
+            <h3 class="role">Systems</h3>
+            <div class="meta">IoT, embedded systems, automation workflows, production-oriented software thinking</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card panel">
+          <h2>What to Improve Next</h2>
+          <ul class="bullet-list">
+            <li>Add <span class="highlight">specific projects with links</span> from your repositories.</li>
+            <li>Replace general claims with <span class="highlight">impact bullets</span>: latency reduced, accuracy improved, defects detected, devices integrated.</li>
+            <li>Add a downloadable CV and a professional email.</li>
+            <li>Include one section for <span class="highlight">industrial problem statements</span> you solved.</li>
+            <li>Use screenshots for your best AI / IoT work.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="card panel contact-box">
+          <h2>Contact</h2>
+          <div>GitHub: <a href="https://github.com/arshanabbas" target="_blank" rel="noreferrer">github.com/arshanabbas</a></div>
+          <div>LinkedIn: <a href="https://www.linkedin.com/in/arshanabbas" target="_blank" rel="noreferrer">linkedin.com/in/arshanabbas</a></div>
+          <div>Email: add your professional email here</div>
+          <div>Location: North Rhine-Westphalia, Germany</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    © <span id="year"></span> Arshan Abbas. Built for GitHub Pages.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
